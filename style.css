@@ -1,0 +1,117 @@
+* {
+   margin: 0;
+}
+
+html, body {
+   height: 100vh;
+}
+
+/* .bg-video {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   min-width: 100%;
+   min-height: 100%;
+} */
+
+.bg-video {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: -1; /* чтобы видео было под другими элементами */
+}
+
+.container {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   animation-name: show;
+   animation-duration: 5s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
+}
+
+@keyframes show {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 100;
+   }
+}
+
+.container {
+   color: #fff;
+}
+
+.container a {
+   color: #fff;
+   text-decoration: none;
+}
+
+.container .header-main {
+   font-family: 'Rajdhani', sans-serif;
+   font-size: 4rem;
+   text-transform: uppercase;
+}
+
+.container .header-second {
+   font-family: 'Secular One', sans-serif;
+   font-size: 2rem;
+   font-weight: 500;
+   margin-bottom: 30px;
+}
+
+.container svg {
+   width: 64px;
+   height: 64px;
+}
+
+.container svg g {
+   /* fill: #000; */
+   /* transition: all ease 1.5s; */
+   transition: color 2s ease-in-out;
+}
+
+.container svg:hover {
+   fill: #fff;
+   color: rgb(255, 255, 255);
+
+}
+
+/* .icon:hover {
+   color: rgb(255, 255, 255);
+ } */
+
+body {
+   position: relative;
+   margin-bottom: 40px;
+   /* Отрегулируйте отступ, чтобы освободить место для кнопки */
+}
+
+/* .music-toggle {
+   position: fixed;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+} */
+
+.soundbutton {
+   position: fixed;
+   bottom: 5vh;
+   right: 5vw;
+   cursor: pointer;
+   width: 24px;
+   transition: .25s ease;
+}
+
+.soundbutton.paused {
+   opacity: .25;
+}
